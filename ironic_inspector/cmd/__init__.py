@@ -1,3 +1,7 @@
+import os
+
+os.environ['EVENTLET_NO_GREENDNS'] = 'yes'  # noqa E402
+
 import eventlet  # noqa
 eventlet.monkey_patch()
 # Monkey patch the original current_thread to use the up-to-date _active
